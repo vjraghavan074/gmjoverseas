@@ -1,0 +1,228 @@
+/* Reset Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Business Name */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D32F2F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .navbar ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+}
+
+/* Section Styling */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Flexbox for Side-by-Side Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 80%;
+    gap: 20px;
+}
+
+/* Image */
+.flex-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Text Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content {
+        text-align: center;
+    }
+}
+
+/* Gradient Background Sections */
+#home { background: url('images/containers.jpg'); }
+#about { background: linear-gradient(135deg, #222, #111); }
+#reports { background: linear-gradient(135deg, #000, #333); }
+#policy { background: linear-gradient(135deg, #333, #222); }
+#services { background: linear-gradient(135deg, #222, #000); }
+#contact { background: white; }
+
+/* Second Footer (Above Main Footer) */
+.second-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 20px 50px;
+}
+
+.footer-column {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.footer-column th {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-column td {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-column td a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column td a:hover {
+    color: #D32F2F; /* Red hover effect */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Main Footer (Now normal, not fixed) */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #D32F2F, #000000);
+    color: white;
+    box-shadow: 0px -4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 0, 0, 1);
+}
+
+/* Responsive Second Footer */
+@media (max-width: 768px) {
+    .second-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
